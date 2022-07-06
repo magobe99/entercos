@@ -106,6 +106,10 @@
 <div th:if="${message != null}">
                         <span class="alert alert-danger alert-dismissable">[[${message}]]</span>
                     </div>
+                
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">Correo o contraseña incorrecto</div>
+                </div>
 
                 <form method="post" th:action="@{/login}"   class="formulario active">
 
